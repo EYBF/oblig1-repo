@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script type="application/javascript">
-        function visMelding(navn) {
-            document.write("Hallo verden for: " + navn);
-        }
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinobillettbestilling</title>
 </head>
 <body>
-    <button onclick="visMelding('Per')">Trykk meg</button>
+    <h1>Kinobilletbestilling</h1>
+
+    <label for="movie">Film:</label>
+    <input type="text" id="movie">
+
+    <label for="name">Navn:</label>
+    <input type="text" id="name">
+
+    <label for="email">E-post:</label>
+    <input type="text" id="email">
+
+    <button onclick="buyTicket()">Kjøp billett</button>
+    <button onclick="deleteAllTickets()">Slett alle billettene</button>
+
+    <h2>Alle billetter</h2>
+    <ul id="ticketList"></ul>
+
+    <script src="script.js"></script>
 </body>
 </html>
