@@ -3,25 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinobillettbestilling</title>
+    <title>Bestilling av kinobilletter</title>
 </head>
 <body>
-    <h1>Kinobilletbestilling</h1>
+    <h1>Bestilling av kinobilletter</h1>
 
-    <label for="movie">Film:</label>
-    <input type="text" id="movie">
+    <div>
+        <label for="movie">Velg film:</label>
+        <select id="movie">
+            <option value="" disabled selected>Velg film her</option>
+            <option value="film1"> Film 1</option>
+            <option value="film2"> Film 2</option>
+            <option value="film3"> Film 3</option>
+        </select>
+    </div>
+    
+    <div style="margin-top: 10px;">
+        <label for="quantity">Antall:</label>
+        <input type="text" id="quantity" style="width: 15px;">
+    </div>
 
-    <label for="name">Navn:</label>
-    <input type="text" id="name">
+    <div style="margin-top: 10px;">
+        <label for="firstname">Fornavn:</label>
+        <input type="text" id="firstname">
+    </div>
 
-    <label for="email">E-post:</label>
-    <input type="text" id="email">
+    <div>
+        <label for="lastname">Etternavn:</label>
+        <input type="text" id="lastname">
+    </div>
 
-    <button onclick="buyTicket()">Kjøp billett</button>
-    <button onclick="deleteAllTickets()">Slett alle billettene</button>
+    <div>
+        <label for="phone">Telefonnr:</label>
+        <input type="tel" id="phone" pattern="[0-9]{8}">
+    </div>
+     
+    <div style="margin-bottom: 10px;">
+        <label for="email">E-post:</label>
+        <input type="text" id="email">
+    </div>
 
+        <button onclick="buyTicket()">Kjøp billett</button>
+
+    
     <h2>Alle billetter</h2>
     <ul id="ticketList"></ul>
+    
+
+   
+        <button onclick="deleteAllTickets()">Slett alle billettene</button>
+  
 
     <script src="script.js"></script>
 </body>
