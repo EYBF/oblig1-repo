@@ -79,7 +79,7 @@ function deleteAllTickets() {
 function displayTickets() {
     const ticketList = document.getElementById('ticketList');
     ticketList.innerHTML ='';
-
+    
     tickets.forEach((ticket)=> {
         const listItem = document.createElement('li');
         listItem.textContent = `Film: ${ticket.movie}, Antall: ${ticket.quantity}, Fornavn: ${ticket.firstName}, Etternavn: ${ticket.lastName}, E-post: ${ticket.email}, Telefonnr: ${ticket.phone}`;
